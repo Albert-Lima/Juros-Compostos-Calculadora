@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pot-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="arquivos/style.css">
+    <title>Calculadora de Juros Compostos</title>
+</head>
+<body>
+    <header><h1>Invest School</h1></header>
+    <section id="barraInfo">
+        <a href="" class="Info">
+            <h2>O que é juros simples</h2>
+        </a>
+        <a href="" class="Info">
+            <h2>O que é juros compostos</h2>
+        </a>
+    </section>
+    <section id="ConteudoCalc">
+        <div id="informaçõestopo"><h2>Informações para calcular</h2></div>
+        <!--Todos os inputs aqui irão funcionar como prompts para o cálculo final-->
+        <div class="divinicial">
+            <h6 class="Label">Saldo inicial</h6>           
+            <div>
+                <label for="saldoinicial">R$</label>
+                <input type="number" placeholder="0,00" id="saldoinicial" min="0">
+            </div>           
+        </div>
+        <div class="divinicial">
+            <h6 class="Label">Aporte mensal</h6>
+            <div>
+                <label for="aportemensal">R$</label>
+                <input type="number" placeholder="0,00" id="aportemensal" min="0">
+            </div>
+        </div>
+        
+        <div class="divComplexa">
+            <div class="Value">
+                <h6 class="Label">Taxa de rendimento(%)</h6>
+                <input type="number" placeholder="0" id="taxaderedimento" class="valores">
+            </div>
+            <div class="EscolhaAba">
+                <div class="totalOpção">
+                    <div id="TextoAmAa" class="TextoRes">ao mês</div> 
+                    <div class="SetaPraBaixo" id="seta1">&#9660;</div><!--quando clicar aqui vai aparecer como forma de escolha da taxa de rendimento-->
+                </div>
+                
+                <div class="Opção" id="opção1">
+                    <div id="aomes">ao mes</div>
+                    <div id="aoano">ao ano</div>
+                </div>
+            </div> 
+        </div>
+        
+        <div class="divComplexa">
+            <div class="Value">
+                <h6 class="Label">prazo(tempo)</h6>
+                <input type="number" placeholder="0" id="prazo" class="valores">
+            </div>
+            <div class="EscolhaAba">
+                <div class="totalOpção">
+                    <div id="TextoMA" class="TextoRes">meses</div><!--esse texto vai  depender da escolha acima-->
+                    <div class="SetaPraBaixo" id="seta2">&#9660;</div> <!--quando clicar  aqui vai aparecer as opções de escolha (meses ou anos)-->
+                </div>              
+                <div class="Opção" id="opção2">
+                    <div id="meses">meses</div>
+                    <div id="anos">anos</div>
+                </div>
+            </div>
+        
+        </div>
+        <div id="Calcular">
+            Calcular
+        </div>
+        
+    </section>
+
+    <script src="arquivos/script.js"></script>
+</body>
+</html>
