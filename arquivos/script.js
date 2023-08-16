@@ -44,18 +44,47 @@ var Meses = document.querySelector('#meses')
 var Anos = document.querySelector('#anos')
 function InnerAM(){
     textAmAa.innerText = 'ao mês'
+    TextMA.innerText = 'meses'
 }
 AoMes.addEventListener('click', InnerAM)
 function InnerAa(){
     textAmAa.innerText = 'ao ano'
+    TextMA.innerText = 'anos'
+
 }
 AoAno.addEventListener('click', InnerAa)
 function InnerMes(){
     TextMA.innerText = 'meses'
+    textAmAa.innerText = 'ao mês'
 }
 Meses.addEventListener('click', InnerMes)
 function InnerAno(){
     TextMA.innerText = 'anos'
+    textAmAa.innerText = 'ao ano'
 }
 Anos.addEventListener('click', InnerAno)
 
+//fórmula de juros compostos M= C(1+i)^t
+//a única diferença que ocorrerá de mensa para anual será se a respota final terá 'por mês' ou 'por ano'
+
+var BTTCalcular = document.querySelector('#Calcular')
+
+function ToCalcule(){
+    var aporte = document.querySelector('#aportemensal')
+    var SaldoIni = document.querySelector('#saldoinicial')
+    var Taxa = document.querySelector('#taxaderedimento').value / 100
+    var Prazo = document.querySelector('#prazo')
+    SaldoIni = Number(SaldoIni.value)
+    Prazo = Number(Prazo.value)
+    aporte = Number(aporte.value)
+    var Res = document.querySelector('#Res')
+    
+    do{            
+        var rendimento = SaldoIni * Taxa
+        SaldoIni = rendimento + aporte + SaldoIni
+        Prazo --
+    }while(Prazo > 0)
+    SaldoIni = parseFloat(SaldoIni.toFixed(2))
+    Res.innerText = 'Você terá '+SaldoIni+' Reais!'
+}
+BTTCalcular.addEventListener('click', ToCalcule)

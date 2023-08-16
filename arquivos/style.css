@@ -3,11 +3,8 @@
 
 }
 :root{
-    --cor-principal: #3b5998; 
-    --cor-secundária: #2e4881;
-}
-body{
-    background-image: url('');
+    --cor-principal: #334979; 
+    --cor-secundária: rgb(34, 34, 121);
 }
 input{
     border: none;
@@ -138,9 +135,13 @@ header h1{
     width: 100%;
     margin-right: 10px;
     font-family: monospace;
+    border-radius: 10px;
 }
 .Opção div:hover{
     cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.445);
+    width: 50%;
+    text-align: center;
 }
 .TextoRes{
     display: flex;
@@ -185,4 +186,18 @@ header h1{
     cursor: pointer;
     background-color: var(--cor-secundária);
     transition-duration: 0.8s;
+}
+#Res{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.082);
+    backdrop-filter: blur;
+    margin-top: 30px;
+    height: 100px;
+    color: rgb(0, 0, 58);
+    font-family: monospace;
+    font-size: 16pt;
 }
